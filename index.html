@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberXFood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header>
+        <div class="container header-container">
+            <a href="#" id="home-link" class="logo">CyberX<span>Food</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" id="nav-home" class="nav-active">Главная</a></li>
+                    <li><a href="#menu" id="nav-menu">Меню</a></li>
+                    <li><a href="#about" id="nav-about">О нас</a></li>
+                    <li><a href="#" id="nav-cart" class="cart-icon">
+                        <span class="cart-icon-symbol"><img src="icons/basket_2.png" style="width: 25px; height: 25px;"></span>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главная страница -->
+    <main id="index-page">
+        <!-- Herо-->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-image">
+                    <img src="images/hero3.jpg" alt="Киберспортивный клуб">
+                </div>
+            </div>
+            <div class="container hero-content">
+                <h1>CYBERX FOOD — <span>ТОПЛИВО ДЛЯ ПОБЕД</span></h1>
+                <p>Доставляем вкусную еду и напитки прямо в клуб. Быстро, вкусно, без отрыва от игры!</p>
+                <a href="#menu" class="btn">Сделать заказ</a>
+            </div>
+        </section>
+
+        <!-- меню -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <h2 class="section-title">Наше меню</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-category="all">Все</button>
+                    <button class="filter-btn" data-category="burgers">Бургеры</button>
+                    <button class="filter-btn" data-category="pizza">Пицца</button>
+                    <button class="filter-btn" data-category="snacks">Закуски</button>
+                    <button class="filter-btn" data-category="drinks">Напитки</button>
+                </div>
+                <div class="menu-grid" id="menu-grid"></div>
+            </div>
+        </section>
+
+        <!--о компании -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>О нашей компании</h2>
+                        <p>CyberXFood - это сервис приготовления и доставки еды, созданный специально для сети компьютерных клубов CyberXCommunity. Мы понимаем, насколько важно для геймеров не отвлекаться от игры, поэтому обеспечиваем быструю и качественную доставку.</p>
+                        <p>Наша кухня оснащена современным оборудованием, а команда поваров готовит вкусные и сытные блюда, которые помогут вам оставаться в игре дольше.</p>
+                        <p>Мы работаем с лучшими поставщиками продуктов, чтобы гарантировать качество каждого блюда. Наша цель - обеспечить вас вкусным и сытным перекусом без отрыва от игры.</p>
+                        <a href="#menu" class="btn">Заказать сейчас</a>
+                    </div>
+                    <div class="about-image">
+                        <div class="placeholder-image about-placeholder">
+                            <img src="images/about_us.jpg" alt="Наша кухня">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Страница корзины -->
+    <div id="cart-page" class="cart-page">
+        <div class="container">
+            <h2 class="section-title">Корзина заказа</h2>
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items">
+                    <div class="empty-cart" id="empty-cart-message">
+                        <p>Ваша корзина пуста</p>
+                        <a href="#" id="go-to-menu" class="btn" style="margin-top: 20px;">Перейти к меню</a>
+                    </div>
+                </div>
+                <div class="order-summary">
+                    <h3>Детали заказа</h3>
+                    <div class="summary-row">
+                        <span>Товары:</span>
+                        <span id="items-total">0 ₽</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка:</span>
+                        <span id="delivery-cost">200 ₽</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Итого:</span>
+                        <span id="order-total">200 ₽</span>
+                    </div>
+                    <div class="address-form">
+                        <h3>Адрес доставки</h3>
+                        <div class="form-group">
+                            <label for="address">Адрес клуба </label>
+                            <input type="text" id="address" placeholder="Улица, дом" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Примечания к заказу</label>
+                            <textarea id="notes" placeholder="Укажите дополнительные пожелания"></textarea>
+                        </div>
+                        <button class="btn" id="checkout-btn" style="width: 100%;">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CyberXFood</h3>
+                    <p>Доставка еды в компьютерные клубы CyberXCommunity. Мы готовим, пока вы играете!</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p><span class="icon">📞</span> 8 (800) 444-13-02</p>
+                    <p><span class="icon">✉️</span> info@cyberx-food.ru</p>
+                    <p><span class="icon">📍</span> Москва, Профсоюзная, 56 (Башня Cherry Tower)</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CyberXCommunity. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
